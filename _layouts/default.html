@@ -76,7 +76,10 @@
     </div>
     <div></div>
     <!--    TESTIMONIAL CAROUSEL      -->
-    {% include testimonials.html %}
+    {% if page.testimonials %}
+      {% include testimonials.html %}
+    {% endif %}
+    
     <!--    END TESTIMONIAL CAROUSEL      -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
