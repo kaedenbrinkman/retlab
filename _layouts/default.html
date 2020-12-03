@@ -68,7 +68,7 @@
   </head>
 
   <body>
-    {% if not page.404 %} {% include nav.html %} {{ content }} {% endif %}
+    {% if page.404 is defined %} {% include nav.html %} {{ content }} {% endif %}
 
     <div></div>
     <!--    TESTIMONIAL CAROUSEL      -->
