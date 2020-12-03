@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <title>
-      {{ nav_page.title | default: "Home" }} | Community Resource Network
+      {{ page.title | default: "Home" }} | Community Resource Network
     </title>
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="assets/img/favicon.png" />
@@ -68,7 +68,7 @@
   </head>
 
   <body>
-    {% include nav.html %} {{ content }}
+    {% if !page.404 %} {% include nav.html %} {{ content }} {% endif %}
 
     <div></div>
     <!--    TESTIMONIAL CAROUSEL      -->
