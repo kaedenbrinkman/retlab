@@ -6,7 +6,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>{{ nav_page.title | default: "Home" }} | Community Resource Network</title>
+    <title>
+      {{ nav_page.title | default: "Home" }} | Community Resource Network
+    </title>
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="assets/img/favicon.png" />
     <meta name="twitter:title" content="Community Resource Network" />
@@ -66,16 +68,12 @@
   </head>
 
   <body>
-    {% include nav.html %}
-            
-        {{ content }}
-          
+    {% include nav.html %} {{ content }}
+
     <div></div>
     <!--    TESTIMONIAL CAROUSEL      -->
-    {% if page.testimonials %}
-      {% include testimonials.html %}
-    {% endif %}
-    
+    {% if page.testimonials %} {% include testimonials.html %} {% endif %}
+
     <!--    END TESTIMONIAL CAROUSEL      -->
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
